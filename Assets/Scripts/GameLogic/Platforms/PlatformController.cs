@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using GameLogic.Station.Interfaces;
 using UnityEngine;
 
 namespace GameLogic.Platforms
@@ -22,6 +23,20 @@ namespace GameLogic.Platforms
             for (int i = 0; i < new NumberOfAvailableTiles().GetAvailableTiles(1); i++)
             {
                 _tiles[i].EnableTile(true);
+            }
+        }
+
+        public void SetNextPoint(IStation nextTarget)
+        {
+            _platformMover.AccessToMove(true);
+            _platformMover.MoveToPoint(nextTarget, PlatformOnStation);
+        }
+
+        private void PlatformOnStation(bool isAccess)
+        {
+            foreach (var platformTile in _tiles)
+            {
+                platformTile.IsAccessToChange = isAccess;
             }
         }
     }

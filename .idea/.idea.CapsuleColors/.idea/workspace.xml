@@ -3,30 +3,75 @@
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
+  <component name="BookmarksViewState">
+    <option name="askBeforeDeletingLists" value="false" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="8990c57d-44fe-4a4d-b3e9-eeca3d58bd89" name="Changes" comment="" />
+    <list default="true" id="8990c57d-44fe-4a4d-b3e9-eeca3d58bd89" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/GameLogic/Station/Interfaces/IStation.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.CapsuleColors/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CapsuleColors/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Capsule.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Capsule.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/PlayerPlatform.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/PlayerPlatform.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameLogic/Capsule/CapsuleController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameLogic/Capsule/CapsuleController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameLogic/Capsule/CapsuleMover.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameLogic/Capsule/CapsuleMover.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameLogic/EventsService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameLogic/EventsService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameLogic/LevelInitiator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameLogic/LevelInitiator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameLogic/LevelStartPositions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameLogic/LevelStartPositions.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameLogic/Platforms/PlatformController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameLogic/Platforms/PlatformController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameLogic/Platforms/PlatformMover.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameLogic/Platforms/PlatformMover.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameLogic/Platforms/PlatformTile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameLogic/Platforms/PlatformTile.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameLogic/Station/Interfaces/IPlatformOnStation.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameLogic/Station/Interfaces/IPlatformOnStation.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameLogic/Station/Interfaces/IStation.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameLogic/Station/StationController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameLogic/Station/StationController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameLogic/Station/StationSpawnCapsules.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameLogic/Station/StationSpawnCapsules.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Infrastructure/BootstrapState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Infrastructure/BootstrapState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Infrastructure/Factories/CapsuleFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Infrastructure/Factories/CapsuleFactory.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Infrastructure/Factories/Interfaces/ICapsuleFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Infrastructure/Factories/Interfaces/ICapsuleFactory.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Infrastructure/Factories/Interfaces/IPlatformFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Infrastructure/Factories/Interfaces/IPlatformFactory.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Infrastructure/Factories/Interfaces/IStationFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Infrastructure/Factories/Interfaces/IStationFactory.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Infrastructure/Factories/PlatformFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Infrastructure/Factories/PlatformFactory.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Infrastructure/Factories/StationFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Infrastructure/Factories/StationFactory.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Infrastructure/GameStateMachine.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Infrastructure/GameStateMachine.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Infrastructure/LoadLevelState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Infrastructure/LoadGameplayLevelState.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Infrastructure/LoadLevelState.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Infrastructure/LoadGameplayLevelState.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/InputSystem/CapsulesSelector.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/InputSystem/CapsulesSelector.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/ColorSelect.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/ColorSelect.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ZenjectInstallers/InfrastructureInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ZenjectInstallers/InfrastructureInstaller.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ZenjectInstallers/LevelInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ZenjectInstallers/LevelInstaller.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ZenjectInstallers/StateMachineInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ZenjectInstallers/StateMachineInstaller.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/ILViewer/a6db8554f29b416f8989cda596d1bba949600/eb/c9f64dc5/0200003Cpdb77.il" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/82a2fd073ee449928e161903460426d72ae00/06/c9bdcbed/ShortcutExtensions.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/e509afeff7384f24a8f0ac30527ff01c1cbe00/32/34dbe1f8/Behaviour.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/e509afeff7384f24a8f0ac30527ff01c1cbe00/50/02ed1c98/Vector3.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/e509afeff7384f24a8f0ac30527ff01c1cbe00/5a/6b7b2d0e/SceneManager.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/e509afeff7384f24a8f0ac30527ff01c1cbe00/71/72f6f5d8/Color.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/e509afeff7384f24a8f0ac30527ff01c1cbe00/86/32b798c0/UnityEvent`1.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/e509afeff7384f24a8f0ac30527ff01c1cbe00/97/c2571c17/Object.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/e509afeff7384f24a8f0ac30527ff01c1cbe00/f7/551c2bd9/WaitForSeconds.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/ecf276dcb8654fa5bed2c5ea1a4ad87046ae00/ce/c74fbd3a/Task.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/ecf276dcb8654fa5bed2c5ea1a4ad87046ae00/f4/7be18c03/ExceptionDispatchInfo.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/fd3fffeb33ad40caa621fc91c02f4136c200/33/760cbe83/TileData.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/ff8d04b86756438d992afa453b2a208c1e2400/ba/6dbfb259/LayoutDataStore.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../Arch/ElectricalContactResistance/Assets/Rendering/RenderingFeatures/DepthNormalsFeature.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../Arch/ElectricalContactResistance/Assets/Rendering/RenderingFeatures/OutlineFeature.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Infrastructure/Factories/Interfaces/IPlatformFactory.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Infrastructure/Factories/Interfaces/IStationFactory.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/InputSystem/CapsulesSelector.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.cysharp.unitask@fbe0bf8515/Runtime/UniTaskScheduler.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.cinemachine@2.10.0/Runtime/Behaviours/CinemachineVirtualCamera.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.cinemachine@2.10.0/Runtime/Core/CinemachineVirtualCameraBase.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ide.visualstudio@2.0.22/Editor/Testing/TestRunnerApiListener.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@2.0.0/Editor/UGUI/UI/SelectableEditor.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@2.0.0/Editor/UGUI/UI/ToggleEditor.cs" root0="SKIP_HIGHLIGHTING" />
@@ -54,6 +99,7 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;XThreadsFramesViewSplitterKey&quot;: &quot;0.36915886&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -123,7 +169,10 @@
       <workItem from="1716221583870" duration="8914000" />
       <workItem from="1716243956100" duration="67000" />
       <workItem from="1716313051227" duration="8438000" />
-      <workItem from="1716323358621" duration="3836000" />
+      <workItem from="1716323358621" duration="4104000" />
+      <workItem from="1716327492893" duration="128000" />
+      <workItem from="1716829244900" duration="16909000" />
+      <workItem from="1716928998400" duration="3911000" />
     </task>
     <servers />
   </component>
@@ -139,108 +188,56 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/ZenjectInstallers/LevelInstaller.cs</url>
-          <line>14</line>
-          <properties documentPath="D:\Unity\CapsuleColors\Assets\Scripts\ZenjectInstallers\LevelInstaller.cs" initialLine="13" containingFunctionPresentation="Method 'InstallBindings'">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/GameLogic/Platforms/PlatformController.cs</url>
+          <line>35</line>
+          <properties documentPath="D:\Unity\CapsuleColors\Assets\Scripts\GameLogic\Platforms\PlatformController.cs" initialLine="34" containingFunctionPresentation="Method 'PlatformOnStation'">
             <startOffsets>
-              <option value="371" />
+              <option value="1047" />
             </startOffsets>
             <endOffsets>
-              <option value="372" />
+              <option value="1048" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="25" />
+          <option name="timeStamp" value="49" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/Infrastructure/LoadLevelState.cs</url>
-          <line>23</line>
-          <properties documentPath="D:\Unity\CapsuleColors\Assets\Scripts\Infrastructure\LoadLevelState.cs" initialLine="23" containingFunctionPresentation="Method 'OnLoaded'">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/GameLogic/Platforms/PlatformTile.cs</url>
+          <line>36</line>
+          <properties documentPath="D:\Unity\CapsuleColors\Assets\Scripts\GameLogic\Platforms\PlatformTile.cs" initialLine="33" containingFunctionPresentation="Method 'SetTileColor'">
             <startOffsets>
-              <option value="622" />
+              <option value="932" />
             </startOffsets>
             <endOffsets>
-              <option value="623" />
+              <option value="933" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="26" />
+          <option name="timeStamp" value="50" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/Infrastructure/SceneLoader.cs</url>
-          <line>34</line>
-          <properties documentPath="D:\Unity\CapsuleColors\Assets\Scripts\Infrastructure\SceneLoader.cs" initialLine="42" containingFunctionPresentation="Method 'LoadScene'">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/InputSystem/CapsulesSelector.cs</url>
+          <line>57</line>
+          <properties documentPath="D:\Unity\CapsuleColors\Assets\Scripts\InputSystem\CapsulesSelector.cs" initialLine="56" containingFunctionPresentation="Method 'DetectObject'">
             <startOffsets>
-              <option value="1041" />
+              <option value="1429" />
             </startOffsets>
             <endOffsets>
-              <option value="1060" />
+              <option value="1430" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="30" />
+          <option name="timeStamp" value="51" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/Infrastructure/SceneLoader.cs</url>
-          <line>28</line>
-          <properties documentPath="D:\Unity\CapsuleColors\Assets\Scripts\Infrastructure\SceneLoader.cs" initialLine="36" containingFunctionPresentation="Method 'LoadScene'">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/InputSystem/CapsulesSelector.cs</url>
+          <line>54</line>
+          <properties documentPath="D:\Unity\CapsuleColors\Assets\Scripts\InputSystem\CapsulesSelector.cs" initialLine="53" containingFunctionPresentation="Method 'DetectObject'">
             <startOffsets>
-              <option value="840" />
+              <option value="1253" />
             </startOffsets>
             <endOffsets>
-              <option value="910" />
+              <option value="1305" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="31" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/ZenjectInstallers/StateMachineInstaller.cs</url>
-          <line>9</line>
-          <properties documentPath="D:\Unity\CapsuleColors\Assets\Scripts\ZenjectInstallers\StateMachineInstaller.cs" initialLine="9" containingFunctionPresentation="Method 'InstallBindings'">
-            <startOffsets>
-              <option value="203" />
-            </startOffsets>
-            <endOffsets>
-              <option value="204" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="38" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/GameLogic/LevelInitiator.cs</url>
-          <line>20</line>
-          <properties documentPath="D:\Unity\CapsuleColors\Assets\Scripts\GameLogic\PlatformInitiator.cs" initialLine="14" containingFunctionPresentation="Constructor 'PlatformInitiator'">
-            <startOffsets>
-              <option value="696" />
-            </startOffsets>
-            <endOffsets>
-              <option value="697" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="39" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/ZenjectInstallers/LevelInstaller.cs</url>
-          <line>17</line>
-          <properties documentPath="D:\Unity\CapsuleColors\Assets\Scripts\ZenjectInstallers\LevelInstaller.cs" initialLine="17" containingFunctionPresentation="Method 'InstallBindings'">
-            <startOffsets>
-              <option value="554" />
-            </startOffsets>
-            <endOffsets>
-              <option value="555" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="40" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/ZenjectInstallers/GameInstaller.cs</url>
-          <line>11</line>
-          <properties documentPath="D:\Unity\CapsuleColors\Assets\Scripts\ZenjectInstallers\GameInstaller.cs" initialLine="11" containingFunctionPresentation="Method 'InstallBindings'">
-            <startOffsets>
-              <option value="235" />
-            </startOffsets>
-            <endOffsets>
-              <option value="236" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="41" />
+          <option name="timeStamp" value="52" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

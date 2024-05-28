@@ -24,6 +24,7 @@ namespace ZenjectInstallers
             Container.Bind<IPlatformFactory>().To<PlatformFactory>().AsSingle();
             Container.Bind<IStationFactory>().To<StationFactory>().AsSingle();
             Container.Bind<ICapsuleFactory>().To<CapsuleFactory>().AsSingle();
+            Container.Bind<IUIFactory>().To<UIFactory>().AsSingle();
         }
     }
 }

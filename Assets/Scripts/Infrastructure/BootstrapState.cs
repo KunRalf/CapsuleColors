@@ -21,7 +21,7 @@ namespace Infrastructure
 
         private void EnterLoadLevel()
         {
-            _gameStateMachine.Enter<LoadLevelState,string>("Level");
+            _gameStateMachine.Enter<LoadGameplayLevelState,string>("Level");
         }
 
         public void Exit()

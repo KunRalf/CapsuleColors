@@ -21,7 +21,7 @@ namespace GameLogic.Station
         {
             for (int i = 0; i < count; i++)
             {
-                var capsule = await _capsuleFactory.Create(_spawnPoints[i].position);
+                var capsule = await _capsuleFactory.Create(_spawnPoints[i].position + new Vector3(0,0.5f,0));
                 _pool.Add(capsule);
             }
         }

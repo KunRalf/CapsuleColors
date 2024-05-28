@@ -1,4 +1,5 @@
-﻿using Cysharp.Threading.Tasks;
+﻿using System.Collections.Generic;
+using Cysharp.Threading.Tasks;
 using Infrastructure.Factories.Interfaces;
 using UnityEngine;
 using Zenject;
@@ -9,8 +10,7 @@ namespace Infrastructure.Factories
     {
         private readonly DiContainer _container;
         private const string STATION_PATH = "Station";
-        
-        public GameObject Station { get; private set; }
+        private List<GameObject> _pool = new List<GameObject>();
         
         public StationFactory(DiContainer container)
         {
@@ -22,7 +22,17 @@ namespace Infrastructure.Factories
             var prefab = Resources.Load<GameObject>(STATION_PATH);
             GameObject station = Object.Instantiate(prefab, at, rot);
             _container.InjectGameObject(station);
-            return Station = station;
+            _pool.Add(station);
+            return  station;
+        }
+        
+        public void CleanUp()
+        {
+            foreach (var item in _pool)
+            {
+                Object.Destroy(item);
+            }
+            _pool.Clear();
         }
     }
 }

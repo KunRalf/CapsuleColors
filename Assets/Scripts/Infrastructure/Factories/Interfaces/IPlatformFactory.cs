@@ -1,11 +1,15 @@
 ﻿using Cysharp.Threading.Tasks;
+using GameLogic.Platforms;
 using UnityEngine;
 
 namespace Infrastructure.Factories.Interfaces
 {
     public interface IPlatformFactory
     {
-        GameObject Plarform { get; }
-        UniTask<GameObject> Create(Vector3 at, Quaternion rot);
+        void CleanUp();
+
+        PlatformController PlatformController { get; }
+        
+        UniTask<PlatformController> Create(Vector3 at, Quaternion rot);
     }
 }

@@ -1,5 +1,6 @@
 ﻿using System;
 using GameLogic;
+using GameLogic.DataObjects.Objects;
 using GameLogic.Platforms;
 using UnityEditor.Media;
 using UnityEngine;
@@ -10,7 +11,7 @@ namespace InputSystem
     public class CapsulesSelector : MonoBehaviour
     {
         private Camera _camera;
-        private Color _color;
+        private ColorPreset _colorData;
         private EventsService _eventsService;
 
 
@@ -30,9 +31,9 @@ namespace InputSystem
             _eventsService.ChangedColor -= ColorChange;
         }
 
-        private void ColorChange(Color color)
+        private void ColorChange(ColorPreset color)
         {
-            _color = color;
+            _colorData = color;
         }
         private void Start()
         {
@@ -55,7 +56,7 @@ namespace InputSystem
             if (!hasTarget) return;
             if (hit.transform.TryGetComponent<PlatformTile>(out var tile))
             {
-               tile.SetTileColor(_color);
+               tile.SetTileColor(_colorData);
             }
         }
     }

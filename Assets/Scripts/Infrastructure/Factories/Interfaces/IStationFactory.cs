@@ -5,7 +5,7 @@ namespace Infrastructure.Factories.Interfaces
 {
     public interface IStationFactory
     {
-        GameObject Station { get; }
+        void CleanUp();
         UniTask<GameObject> Create(Vector3 at, Quaternion rot);
     }
 }

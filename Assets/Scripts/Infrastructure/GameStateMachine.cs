@@ -1,6 +1,7 @@
 ﻿
 using System;
 using System.Collections.Generic;
+using GameLogic;
 using Zenject;
 
 
@@ -22,7 +23,8 @@ namespace Infrastructure
             _states = new Dictionary<Type, IExitableState>
             {
                 [typeof(BootstrapState)]    = _stateFactory.CreateState<BootstrapState>(),
-                [typeof(LoadLevelState)]    = _stateFactory.CreateState<LoadLevelState>(),
+                [typeof(LoadGameplayLevelState)]    = _stateFactory.CreateState<LoadGameplayLevelState>(),
+                [typeof(GameLoopState)]    = _stateFactory.CreateState<GameLoopState>(),
             };
             
             Enter<BootstrapState>();

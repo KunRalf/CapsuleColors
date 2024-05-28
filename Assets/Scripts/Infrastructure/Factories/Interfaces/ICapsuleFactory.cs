@@ -5,7 +5,7 @@ namespace Infrastructure.Factories.Interfaces
 {
     public interface ICapsuleFactory
     {
-        GameObject Capsule { get; }
+        void CleanUp();
         UniTask<GameObject> Create(Vector3 at);
     }
 }

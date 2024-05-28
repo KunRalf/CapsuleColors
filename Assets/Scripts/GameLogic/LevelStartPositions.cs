@@ -11,8 +11,8 @@ namespace GameLogic
         public Vector3 PlatformStartPos => _platfromStartPoint.position;
         public Quaternion PlatformStartRot => _platfromStartPoint.rotation;
         
-        public Vector3 StantionStartPos => _stantionStartPoint.position;
-        public Quaternion StantionStartRot => _stantionStartPoint.rotation;
+        public Vector3 StationStartPos => _stantionStartPoint.position;
+        public Quaternion StationStartRot => _stantionStartPoint.rotation;
         
     }
 }
