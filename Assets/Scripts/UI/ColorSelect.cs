@@ -5,6 +5,7 @@ using Tools.Toggle;
 using UnityEditor.MPE;
 using UnityEngine;
 using UnityEngine.Serialization;
+using UnityEngine.UI;
 using Zenject;
 
 namespace UI
@@ -12,6 +13,7 @@ namespace UI
     [RequireComponent(typeof(ToggleCustom))]
     public class ColorSelect : MonoBehaviour
     {
+        [SerializeField] private Image _image;
         private ToggleCustom _toggleCustom;
         [SerializeField] private ColorPreset _colorPreset;
         private EventsService _eventsService;
@@ -22,7 +24,7 @@ namespace UI
         {
             _eventsService = eventsService;
         }
-
+        
         public void SelectColor()
         {
             _toggleCustom.IsOn = true;
@@ -32,6 +34,8 @@ namespace UI
         private void Awake()
         {
             _toggleCustom = GetComponent <ToggleCustom>();
+            if (_image != null && _colorPreset != null)
+                _image.color = _colorPreset.Color;
         }
 
         private void OnEnable()

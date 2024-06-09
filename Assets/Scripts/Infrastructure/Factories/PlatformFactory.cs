@@ -1,5 +1,7 @@
 ﻿using System.Threading.Tasks;
 using Cysharp.Threading.Tasks;
+using GameLogic;
+using GameLogic.Interfaces;
 using GameLogic.Platforms;
 using Infrastructure.Factories.Interfaces;
 using UnityEngine;
@@ -19,12 +21,14 @@ namespace Infrastructure.Factories
             _container = container;
         }
       
-        public async UniTask<PlatformController> Create(Vector3 at, Quaternion rot)
+        public async UniTask<PlatformController> Create(LevelStartPositions positions, ILevelLogic levelLogic)
         {
             var prefab = Resources.Load<GameObject>(PLAFROM_PATH);
-            GameObject platform = Object.Instantiate(prefab, at, rot);
+            GameObject platform = _container.InstantiatePrefab(prefab, positions.PlatformStartPos,positions.PlatformStartRot, positions.transform.parent);
             _container.InjectGameObject(platform);
-            return PlatformController = platform.GetComponent<PlatformController>();
+            PlatformController = platform.GetComponent<PlatformController>();
+            PlatformController.Init(levelLogic);
+            return PlatformController;
         }
         
         public void CleanUp()

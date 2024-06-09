@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 namespace GameLogic.Station.Interfaces
 {
@@ -6,5 +7,6 @@ namespace GameLogic.Station.Interfaces
     {
         Vector3 PlatformStopPos { get; }
         void PlatformOnStation(bool isActive);
+        int StationId { get; }
     }
 }

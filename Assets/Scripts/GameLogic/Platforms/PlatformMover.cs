@@ -8,7 +8,6 @@ namespace GameLogic.Platforms
     public class PlatformMover : MonoBehaviour
     {
         [SerializeField] private float _speed;
-        [SerializeField] private Transform _target;
         private bool _isAccessToMove;
         
         public void MoveToPoint(IStation target, Action<bool> action)
@@ -18,7 +17,6 @@ namespace GameLogic.Platforms
             transform.DOMoveZ(target.PlatformStopPos.z, 5f).OnComplete(() =>
             {
                 action?.Invoke(true);
-                target.PlatformOnStation(false);
             });
         }
         

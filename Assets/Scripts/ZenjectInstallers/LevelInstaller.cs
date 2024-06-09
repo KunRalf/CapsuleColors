@@ -1,5 +1,6 @@
 ﻿using Cinemachine;
 using GameLogic;
+using GameLogic.Interfaces;
 using Infrastructure;
 using UnityEngine;
 using UnityEngine.Serialization;
@@ -16,8 +17,9 @@ namespace ZenjectInstallers
         {
             Container.Bind<LevelStartPositions>().FromInstance(_levelStartPositions).AsSingle().NonLazy();
             Container.Bind<CinemachineVirtualCamera>().FromInstance(_camera).AsSingle().NonLazy();
-            Container.BindInterfacesAndSelfTo<StationGenerator>().AsSingle();
+            Container.BindInterfacesAndSelfTo<StationGenerator>().AsSingle().NonLazy();
             Container.Bind<LevelInitiator>().AsSingle().NonLazy();
+            Container.Bind<ILevelLogic>().To<LevelLogic>().AsSingle().NonLazy();
         }
     }
 }

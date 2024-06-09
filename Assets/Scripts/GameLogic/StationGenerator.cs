@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using Cysharp.Threading.Tasks;
+using GameLogic.Interfaces;
 using GameLogic.Station;
 using GameLogic.Station.Interfaces;
 using Infrastructure.Factories.Interfaces;
@@ -13,11 +14,10 @@ namespace GameLogic
         private readonly IStationFactory _stationFactory;
         private readonly LevelStartPositions _startPositions;
         private List<StationController> _pool = new List<StationController>();
-        private const int _staionsGenerateCount = 10; 
-        private const float _rangeBetweenStations = 60f; 
-        public int LastStationId { get; private set; }
-        public int StartStationId { get; private set; }
-        public IStation FirstStation => _pool[StartStationId];
+        private const int _staionsGenerateCount = 5; 
+        private const float _rangeBetweenStations = 60f;
+        private int _firstId;
+        public IStation FirstStation => _pool[_firstId];
         public IStation LastStation => _pool[^1];
        
 
@@ -29,7 +29,7 @@ namespace GameLogic
 
         public async UniTask GenerateStation(int startGeneratedId)
         {
-            StartStationId = startGeneratedId;
+            _firstId = startGeneratedId;
             Quaternion stationRot = _startPositions.StationStartRot;
             Vector3 spawnPos;
             for (int i = 0; i < _staionsGenerateCount; i++)
@@ -41,13 +41,22 @@ namespace GameLogic
                 station.Init(startGeneratedId);
                 _pool.Add(station);
             }
-            LastStationId = startGeneratedId;
         }
-        
+
+        public IStation GetStationById(int id)
+        {
+            if (_pool.Any(_ => _.StationId == id))
+            {
+                return _pool.First(_ => _.StationId == id);
+            }
+            return null;
+        }
+
         public void RemovePrevStation(int id)
         {
-            StationController prevStation = _pool.FirstOrDefault(_ => _.Id == id);
-            if(prevStation == default) return;
+            if(!_pool.Any(_ => _.StationId == id)) return;
+            StationController prevStation = _pool.First(_ => _.StationId == id);
+            prevStation.Default();
             Object.Destroy(prevStation.gameObject);
             _pool.Remove(prevStation);
         }

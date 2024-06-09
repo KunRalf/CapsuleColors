@@ -1,4 +1,5 @@
 ﻿using Cysharp.Threading.Tasks;
+using GameLogic.Interfaces;
 using GameLogic.Station.Interfaces;
 
 namespace GameLogic
@@ -6,10 +7,9 @@ namespace GameLogic
     public interface IStationGenerate
     {
         UniTask GenerateStation(int startId);
-        int LastStationId { get; }
-        int StartStationId { get; }
         IStation FirstStation { get; }
         IStation LastStation { get; }
+        IStation GetStationById(int id);
         void RemovePrevStation(int id);
     }
 }

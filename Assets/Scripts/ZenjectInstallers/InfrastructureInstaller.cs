@@ -1,4 +1,5 @@
-﻿using Infrastructure;
+﻿using GameLogic;
+using Infrastructure;
 using Infrastructure.Factories;
 using Infrastructure.Factories.Interfaces;
 using UnityEngine;
@@ -12,10 +13,10 @@ namespace ZenjectInstallers
         
         public override void InstallBindings()
         {
+            Container.Bind<EventsService>().AsSingle();
             Container.BindInterfacesAndSelfTo<StateFactory>().AsSingle();
             Container.BindInterfacesAndSelfTo<GameBootstrapper>().FromInstance(_game).AsSingle();
             Container.Bind<SceneLoader>().AsSingle();
-            
             BindFactories();
         }
 

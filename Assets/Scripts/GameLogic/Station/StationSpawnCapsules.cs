@@ -17,6 +17,15 @@ namespace GameLogic.Station
             SpawCapsules(4);
         }
 
+        public void Default()
+        {
+            foreach (var item in _pool)
+            {
+                Object.Destroy(item);
+            }
+            _pool.Clear();
+        }
+        
         private async void SpawCapsules(int count)
         {
             for (int i = 0; i < count; i++)
@@ -25,5 +34,6 @@ namespace GameLogic.Station
                 _pool.Add(capsule);
             }
         }
+        
     }
 }

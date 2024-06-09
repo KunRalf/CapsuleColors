@@ -371,6 +371,13 @@ MonoBehaviour:
   - {fileID: 7912004058522026190}
   - {fileID: 3356904788569770994}
   _blockNavMesh: {fileID: 5940566519830047636}
+  _colorsPresets:
+  - {fileID: 11400000, guid: a64b66578e3d90b4a85090c3ead16d6e, type: 2}
+  - {fileID: 11400000, guid: 09041bdf9b169d74190749b939631930, type: 2}
+  - {fileID: 11400000, guid: 7d4490f0b806423419968306aba7741f, type: 2}
+  - {fileID: 11400000, guid: 150d34cdcd3f44d498758e14d5c54dbd, type: 2}
+  - {fileID: 11400000, guid: c46ce141498fc7d48be967a26af5d7c6, type: 2}
+  - {fileID: 11400000, guid: c5ab3dda3ef5ecb489478b7c3fb5211b, type: 2}
 --- !u!1 &2342262905970671403
 GameObject:
   m_ObjectHideFlags: 0

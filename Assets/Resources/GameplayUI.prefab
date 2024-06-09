@@ -186,6 +186,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9626eafee2a4a46b0b6e7147d3f5923, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _image: {fileID: 4989606910094221476}
   _colorPreset: {fileID: 11400000, guid: c5ab3dda3ef5ecb489478b7c3fb5211b, type: 2}
 --- !u!1 &1772348134917795744
 GameObject:
@@ -298,6 +299,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9626eafee2a4a46b0b6e7147d3f5923, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _image: {fileID: 9150678054789586547}
   _colorPreset: {fileID: 11400000, guid: 09041bdf9b169d74190749b939631930, type: 2}
 --- !u!1 &2333594019456549986
 GameObject:
@@ -683,6 +685,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9626eafee2a4a46b0b6e7147d3f5923, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _image: {fileID: 5050702286651048276}
   _colorPreset: {fileID: 11400000, guid: a64b66578e3d90b4a85090c3ead16d6e, type: 2}
 --- !u!1 &5897210562750197689
 GameObject:
@@ -795,6 +798,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9626eafee2a4a46b0b6e7147d3f5923, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _image: {fileID: 4276301652825552361}
   _colorPreset: {fileID: 11400000, guid: 150d34cdcd3f44d498758e14d5c54dbd, type: 2}
 --- !u!1 &6245211579471844215
 GameObject:
@@ -1132,6 +1136,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9626eafee2a4a46b0b6e7147d3f5923, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _image: {fileID: 6532018289373227131}
   _colorPreset: {fileID: 11400000, guid: c46ce141498fc7d48be967a26af5d7c6, type: 2}
 --- !u!1 &7398804099295244231
 GameObject:
@@ -1194,7 +1199,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.8862745, g: 0.27058825, b: 0.011764706, a: 1}
+  m_Color: {r: 0.8862745, g: 0.44705883, b: 0.011764706, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1244,4 +1249,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9626eafee2a4a46b0b6e7147d3f5923, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _image: {fileID: 4156105870577554717}
   _colorPreset: {fileID: 11400000, guid: 7d4490f0b806423419968306aba7741f, type: 2}
