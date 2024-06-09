@@ -1,26 +1,31 @@
 ﻿using System.Collections.Generic;
+using GameLogic.DataObjects.Objects;
 using UnityEngine;
+
 
 namespace GameLogic
 {
     public class ColorsGenerator
     {
-        private readonly int _curLevel;
+        private readonly int _activeTilesCount;
+        private readonly List<ColorPreset> _colorsPresets;
 
-        public ColorsGenerator(int curLevel)
+        public ColorsGenerator(int activeTilesCount, List<ColorPreset> colorsPresets)
         {
-            _curLevel = curLevel;
+            _activeTilesCount = activeTilesCount;
+            _colorsPresets = colorsPresets;
         }
 
-        public List<Color> GenerateRandomColor()
+        public List<ColorPreset> GenerateRandomColor()
         {
-            List<Color> colors = new List<Color>();
-            for (int i = 0; i < _curLevel; i++)
+            List<ColorPreset> colors = new List<ColorPreset>();
+            for (int i = 0; i < _activeTilesCount; i++)
             {
-            //    colors;
+                int randomValue = Random.Range(0, _colorsPresets.Count - 1);
+                colors.Add(_colorsPresets[randomValue]);
             }
 
-            return null;
+            return colors;
         }
     }
 }

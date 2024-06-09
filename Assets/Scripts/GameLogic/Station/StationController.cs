@@ -1,9 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using GameLogic.DataObjects.Objects;
+using GameLogic.Station.Biliboard;
 using GameLogic.Station.Interfaces;
-using Infrastructure;
 using Infrastructure.Factories.Interfaces;
+using NUnit.Framework;
 using UnityEngine;
 using Zenject;
 
@@ -14,7 +14,8 @@ namespace GameLogic.Station
         [SerializeField] private List<Transform> _spawnPlaces;
         [SerializeField] private GameObject _blockNavMesh;
         [SerializeField] private List<ColorPreset> _colorsPresets;
-
+        [SerializeField] private BillboardController _billboardController;
+        
         private StationSpawnCapsules _stationSpawnCapsules;
         private ICapsuleFactory _capsuleFactory;
         private EventsService _eventsService;
@@ -31,7 +32,10 @@ namespace GameLogic.Station
         
         public void Init(int id)
         {
-            _stationSpawnCapsules = new StationSpawnCapsules(_spawnPlaces, _capsuleFactory);
+            ColorsGenerator colorsGenerator = new ColorsGenerator(new NumberOfAvailableTiles().GetAvailableTiles(1), _colorsPresets);
+            List<ColorPreset> colorsPresets = colorsGenerator.GenerateRandomColor();
+            _stationSpawnCapsules = new StationSpawnCapsules(_spawnPlaces, _capsuleFactory, colorsPresets);
+            _billboardController.Init(colorsPresets);
             StationId = id;
             PlatformOnStation(false);
             _eventsService.PlatformOnStation += PlatformOnStation;

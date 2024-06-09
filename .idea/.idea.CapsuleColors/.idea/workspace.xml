@@ -9,27 +9,12 @@
   <component name="ChangeListManager">
     <list default="true" id="8990c57d-44fe-4a4d-b3e9-eeca3d58bd89" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.CapsuleColors/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CapsuleColors/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/GameplayUI.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/GameplayUI.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/ProjectContext.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/ProjectContext.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/ColorCount.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/ColorCount.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources/Station.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Station.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameLogic/EventsService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameLogic/EventsService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameLogic/IStationGenerate.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameLogic/IStationGenerate.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameLogic/LevelInitiator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameLogic/LevelInitiator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameLogic/Platforms/PlatformController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameLogic/Platforms/PlatformController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameLogic/Platforms/PlatformMover.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameLogic/Platforms/PlatformMover.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameLogic/Station/Interfaces/IStation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameLogic/Station/Interfaces/IStation.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameLogic/Capsule/CapsuleController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameLogic/Capsule/CapsuleController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameLogic/ColorsGenerator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameLogic/ColorsGenerator.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameLogic/Station/StationController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameLogic/Station/StationController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameLogic/Station/StationSpawnCapsules.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameLogic/Station/StationSpawnCapsules.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameLogic/StationGenerator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameLogic/StationGenerator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Infrastructure/Factories/Interfaces/IPlatformFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Infrastructure/Factories/Interfaces/IPlatformFactory.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Infrastructure/Factories/PlatformFactory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Infrastructure/Factories/PlatformFactory.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Infrastructure/GameLoopState.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Infrastructure/GameLoopState.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/ColorSelect.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/ColorSelect.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/GameplayUI.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/GameplayUI.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ZenjectInstallers/GameInstaller.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ZenjectInstallers/GameInstaller.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ZenjectInstallers/InfrastructureInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ZenjectInstallers/InfrastructureInstaller.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ZenjectInstallers/LevelInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ZenjectInstallers/LevelInstaller.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -141,10 +126,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="660">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" />
+      <option name="pid" value="660" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -174,7 +159,7 @@
       <workItem from="1716928998400" duration="3987000" />
       <workItem from="1717096617190" duration="14055000" />
       <workItem from="1717529448144" duration="7855000" />
-      <workItem from="1717956705253" duration="4862000" />
+      <workItem from="1717956705253" duration="9597000" />
     </task>
     <servers />
   </component>

@@ -1,4 +1,5 @@
 ﻿using System;
+using GameLogic.DataObjects.Objects;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -10,7 +11,7 @@ namespace GameLogic.Capsule
         [SerializeField] private MeshRenderer _meshRenderer;
 
         private NavMeshAgent _agent;
-        
+        private TileColors _color;
         private CapsuleColorChanger _capsuleColorChanger;
         private CapsuleReplacer _capsuleReplacer;
         private CapsuleMover _capsuleMover;
@@ -18,17 +19,14 @@ namespace GameLogic.Capsule
         private void Awake()
         {
             _agent = GetComponent<NavMeshAgent>();
-        }
-
-        private void Start()
-        {
             _capsuleColorChanger = new CapsuleColorChanger(_meshRenderer);
             _capsuleMover = new CapsuleMover(_agent);
         }
 
-        public void Init(Color color)
+        public void Init(ColorPreset colorPreset)
         {
-            _capsuleColorChanger.ChangeColor(color);   
+            _capsuleColorChanger.ChangeColor(colorPreset.Color);
+            _color = colorPreset.TileTypeColor;
         }
 
 
