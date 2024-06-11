@@ -6,6 +6,8 @@ namespace Infrastructure.Factories.Interfaces
     public interface IUIFactory
     {
         UniTask CreateUIRoot();
-        UniTask<GameplayUI> CreateGamePlayUI();
+        UniTask<HUDController> CreateHUD();
+        
+        void CleanUp();
     }
 }

@@ -26,7 +26,7 @@ namespace Infrastructure
         private async void OnLoaded()
         {
             await _uiFactory.CreateUIRoot();
-            await _uiFactory.CreateGamePlayUI();
+            await _uiFactory.CreateHUD();
             
             _gameStateMachine.Enter<GameLoopState>();
         }

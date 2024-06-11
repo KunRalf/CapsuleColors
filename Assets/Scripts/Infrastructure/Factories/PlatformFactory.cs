@@ -21,13 +21,14 @@ namespace Infrastructure.Factories
             _container = container;
         }
       
-        public async UniTask<PlatformController> Create(LevelStartPositions positions, ILevelLogic levelLogic)
+        public async UniTask<PlatformController> Create(LevelStartPositions positions)
         {
             var prefab = Resources.Load<GameObject>(PLAFROM_PATH);
-            GameObject platform = _container.InstantiatePrefab(prefab, positions.PlatformStartPos,positions.PlatformStartRot, positions.transform.parent);
+            GameObject platform = _container.InstantiatePrefab(prefab, positions.PlatformStartPos,positions.PlatformStartRot,
+                positions.transform);
             _container.InjectGameObject(platform);
             PlatformController = platform.GetComponent<PlatformController>();
-            PlatformController.Init(levelLogic);
+            PlatformController.Init();
             return PlatformController;
         }
         

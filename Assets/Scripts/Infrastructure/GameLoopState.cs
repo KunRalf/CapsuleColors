@@ -9,14 +9,16 @@ namespace Infrastructure
         private readonly ICapsuleFactory _capsuleFactory;
         private readonly IPlatformFactory _platformFactory;
         private readonly IStationFactory _stationFactory;
+        private readonly IUIFactory _uiFactory;
 
         public GameLoopState(ICapsuleFactory capsuleFactory, 
             IPlatformFactory platformFactory, 
-            IStationFactory stationFactory)
+            IStationFactory stationFactory, IUIFactory uiFactory)
         {
             _capsuleFactory = capsuleFactory;
             _platformFactory = platformFactory;
             _stationFactory = stationFactory;
+            _uiFactory = uiFactory;
         }
 
         public void Exit()
@@ -24,6 +26,7 @@ namespace Infrastructure
             _capsuleFactory.CleanUp();
             _platformFactory.CleanUp();
             _stationFactory.CleanUp();
+            _uiFactory.CleanUp();
         }
 
         public void Enter()

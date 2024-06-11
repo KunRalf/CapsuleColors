@@ -12,25 +12,26 @@ namespace GameLogic
     {
         private readonly IStationGenerate _stationGenerate;
         private readonly IPlatformFactory _platformFactory;
-
-        private readonly LevelInitiator _levelInitiator;
-
+        private readonly EventsService _eventsService;
         //   private readonly PlatformController _mainPlatform;
         private readonly GameData _gameData;
         public int CurrentStationId { get; private set; }
         private int _platformsBeforeGenerate = 2;
         
-        public LevelLogic(IStationGenerate stationGenerate, IPlatformFactory platformFactory)
+        public LevelLogic(IStationGenerate stationGenerate, IPlatformFactory platformFactory, EventsService eventsService)
         {
             _stationGenerate = stationGenerate;
             _platformFactory = platformFactory;
-            // _mainPlatform = platformFactory.PlatformController;
+            _eventsService = eventsService;
+            _eventsService.TimeEnded += TimeIsOver;
             //TODO: сюда подтянуть сейвер
             _gameData = new GameData(10,0);
         }
 
         public void TimeIsOver()
         {
+            // 
+            var Selected = _platformFactory.PlatformController.GetSelectedTiles();
             CurrentStationId = _platformFactory.PlatformController.CurrentStationId;
             _platformFactory.PlatformController.SetNextPoint(_stationGenerate.GetStationById(CurrentStationId + 1));
             _stationGenerate.RemovePrevStation(CurrentStationId - 1);

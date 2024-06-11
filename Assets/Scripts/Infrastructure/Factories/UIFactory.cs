@@ -1,7 +1,6 @@
 ﻿using Cysharp.Threading.Tasks;
 using Infrastructure.Factories.Interfaces;
 using UI;
-using Unity.VisualScripting;
 using UnityEngine;
 using Zenject;
 
@@ -10,12 +9,13 @@ namespace Infrastructure.Factories
     public class UIFactory : IUIFactory
     {
         private const string UI_ROOT      = "UIRoot";
-        private const string GAMEPLAY_UI      = "GameplayUI";
+        private const string HUD      = "HUD";
         
         private readonly DiContainer _container;
 
         private Canvas _uiRoot;
-        
+        private HUDController _hud;
+
         public UIFactory(DiContainer container)
         {
             _container = container;
@@ -27,13 +27,22 @@ namespace Infrastructure.Factories
             _uiRoot = Object.Instantiate(prefab).GetComponent<Canvas>();
         }
 
-        public async UniTask<GameplayUI> CreateGamePlayUI()
+        public async UniTask<HUDController> CreateHUD()
         {
-            var prefab = Resources.Load<GameObject>(GAMEPLAY_UI);
-            var gamePlayUI = Object.Instantiate(prefab, _uiRoot.transform).GetComponent<GameplayUI>();
-            _container.InjectGameObject(gamePlayUI.gameObject);
-            gamePlayUI.Init();
-            return gamePlayUI;
+            var prefab = Resources.Load<GameObject>(HUD);
+            var hud = Object.Instantiate(prefab, _uiRoot.transform).GetComponent<HUDController>();
+            _container.InjectGameObject(hud.gameObject);
+            hud.Init();
+            _hud = hud;
+            return hud;
+        }
+
+        public void CleanUp()
+        {
+            Object.Destroy(_hud.gameObject);
+            Object.Destroy(_uiRoot);
+            _hud = null;
+            _uiRoot = null;
         }
     }
 }

@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
+using GameLogic.DataObjects.Objects;
 using GameLogic.Interfaces;
 using GameLogic.Station.Interfaces;
 using Infrastructure.Factories.Interfaces;
@@ -14,7 +16,6 @@ namespace GameLogic.Platforms
         [SerializeField] private List<PlatformTile> _tiles;
         
         private PlatformMover _platformMover;
-        private ILevelLogic _levelLogic;
         private IStation _currentStation;
         private EventsService _eventsService;
 
@@ -25,24 +26,29 @@ namespace GameLogic.Platforms
         {
             _eventsService = eventsService;
         }
-        
-        private void Awake()
+
+        public void Init()
         {
             _platformMover = GetComponent<PlatformMover>();
             _platformMover.AccessToMove(false);
-            for (int i = 0; i < _tiles.Count; i++)
-            {
-                _tiles[i].SetIndex(i);
-            }
-            for (int i = 0; i < new NumberOfAvailableTiles().GetAvailableTiles(1); i++)
+            EnableTiles(new NumberOfAvailableTiles().GetAvailableTiles(1));
+        }
+
+        private void EnableTiles(int count)
+        {
+            WarmUpTiles();
+            for (int i = 0; i < count; i++)
             {
                 _tiles[i].EnableTile(true);
             }
         }
 
-        public void Init(ILevelLogic levelLogic)
+        private void WarmUpTiles()
         {
-            _levelLogic = levelLogic;
+            for (int i = 0; i < _tiles.Count; i++)
+            {
+                _tiles[i].Init(i);
+            }
         }
         
         public void SetNextPoint(IStation nextTarget)
@@ -51,6 +57,11 @@ namespace GameLogic.Platforms
             _currentStation = nextTarget;
             _platformMover.AccessToMove(true);
             _platformMover.MoveToPoint(nextTarget, PlatformOnStation);
+        }
+
+        public List<IPlatformTile> GetSelectedTiles()
+        {
+            return _tiles.Where(tile => tile.TileColor != TileColors.None).Cast<IPlatformTile>().ToList();
         }
         
         private void PlatformOnStation(bool isAccess)

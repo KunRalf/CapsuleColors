@@ -32,14 +32,13 @@ namespace GameLogic.Station
         
         public void Init(int id)
         {
-            ColorsGenerator colorsGenerator = new ColorsGenerator(new NumberOfAvailableTiles().GetAvailableTiles(1), _colorsPresets);
+            ColorsGenerator colorsGenerator = new ColorsGenerator(new NumberOfAvailableTiles().GetAvailableTiles(1/* TODO: сюда из сейвера текущий уровень платформы */), _colorsPresets);
             List<ColorPreset> colorsPresets = colorsGenerator.GenerateRandomColor();
             _stationSpawnCapsules = new StationSpawnCapsules(_spawnPlaces, _capsuleFactory, colorsPresets);
             _billboardController.Init(colorsPresets);
             StationId = id;
             PlatformOnStation(false);
             _eventsService.PlatformOnStation += PlatformOnStation;
-            // заполнение билборда
         }
 
         private void OnDestroy()
@@ -59,7 +58,7 @@ namespace GameLogic.Station
             _blockNavMesh.SetActive(true);
         }
      
-        private void PlatformOnStation(bool isActive, int id)
+        public void PlatformOnStation(bool isActive, int id)
         {
             if(id != StationId) return;
             PlatformOnStation(isActive);

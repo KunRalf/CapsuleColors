@@ -8,7 +8,7 @@ using UnityEngine;
 
 namespace UI
 {
-    public class GameplayUI : MonoBehaviour, ICoroutineRunner
+    public class ColorButtons : MonoBehaviour, ICoroutineRunner
     {
         [SerializeField] private CanvasGroup _canvasGroup;
         [SerializeField] private List<ColorSelect> _colors;

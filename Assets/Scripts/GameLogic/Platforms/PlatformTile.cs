@@ -5,7 +5,7 @@ using UnityEngine;
 namespace GameLogic.Platforms
 {
     [RequireComponent(typeof(MeshRenderer))]
-    public class PlatformTile : MonoBehaviour
+    public class PlatformTile : MonoBehaviour, IPlatformTile
     {
         [SerializeField] private ColorPreset _defaultColor;
         [SerializeField] private int _index;
@@ -15,22 +15,20 @@ namespace GameLogic.Platforms
         private bool _isAccessToChange;
         
         public int Index => _index;
+        public TileStatus TileStatus { get; private set; }
+        public TileColors TileColor => _colorData.TileTypeColor;
 
         public bool IsAccessToChange
         {
             get => _isAccessToChange;
             set => _isAccessToChange = value;
         }
-        
-        private void Awake()
-        {
-            _meshRenderer = GetComponent<MeshRenderer>();
-            DefaultColor();
-        }
 
-        public void SetIndex(int index)
+        public void Init(int index)
         {
             _index = index;
+            _meshRenderer = GetComponent<MeshRenderer>();
+            DefaultColor();
         }
 
         public void SetTileColor(ColorPreset colorData)

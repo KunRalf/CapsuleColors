@@ -7,6 +7,8 @@ namespace GameLogic.Station.Interfaces
     {
         Vector3 PlatformStopPos { get; }
         void PlatformOnStation(bool isActive);
+
+        void PlatformOnStation(bool isActive, int id);
         int StationId { get; }
     }
 }

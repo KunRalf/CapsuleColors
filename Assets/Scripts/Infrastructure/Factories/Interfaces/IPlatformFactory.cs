@@ -12,6 +12,6 @@ namespace Infrastructure.Factories.Interfaces
 
         PlatformController PlatformController { get; }
 
-        UniTask<PlatformController> Create(LevelStartPositions positions, ILevelLogic lv);
+        UniTask<PlatformController> Create(LevelStartPositions positions);
     }
 }
