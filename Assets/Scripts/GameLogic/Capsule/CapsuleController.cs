@@ -10,25 +10,28 @@ namespace GameLogic.Capsule
     {
         [SerializeField] private MeshRenderer _meshRenderer;
 
+        private int _tileBindingIndex = -1;
         private NavMeshAgent _agent;
         private TileColors _color;
         private CapsuleColorChanger _capsuleColorChanger;
         private CapsuleReplacer _capsuleReplacer;
         private CapsuleMover _capsuleMover;
 
-        private void Awake()
+        public int TileBindingIndex => _tileBindingIndex;
+
+        public void Init(ColorPreset colorPreset)
         {
             _agent = GetComponent<NavMeshAgent>();
             _capsuleColorChanger = new CapsuleColorChanger(_meshRenderer);
             _capsuleMover = new CapsuleMover(_agent);
-        }
-
-        public void Init(ColorPreset colorPreset)
-        {
             _capsuleColorChanger.ChangeColor(colorPreset.Color);
             _color = colorPreset.TileTypeColor;
         }
 
+        public void SetTileBindingIndex(int index)
+        {
+            _tileBindingIndex = index;
+        }
 
         private void Update()
         {

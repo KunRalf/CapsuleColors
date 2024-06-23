@@ -10,7 +10,7 @@ namespace GameLogic.Station
     {
         private List<Transform> _spawnPoints;
         private readonly ICapsuleFactory _capsuleFactory;
-        private List<GameObject> _pool = new List<GameObject>();
+        private List<CapsuleController> _pool = new List<CapsuleController>();
         private Vector3 _spawnOffset = new Vector3(0, 0.5f, 0);
 
         public StationSpawnCapsules(List<Transform> spawnPoints, ICapsuleFactory capsuleFactory, List<ColorPreset> colorPresets)
@@ -24,9 +24,19 @@ namespace GameLogic.Station
         {
             foreach (var item in _pool)
             {
-                Object.Destroy(item);
+                Object.Destroy(item.gameObject);
             }
             _pool.Clear();
+        }
+
+        public void AddCapsule(CapsuleController capsule)
+        {
+            _pool.Add(capsule);
+        }
+        
+        public void RemoveCapsule(CapsuleController capsule)
+        {
+            _pool.Remove(capsule);
         }
         
         private async void SpawnCapsules(int count, List<ColorPreset> colorPresets)
@@ -34,10 +44,9 @@ namespace GameLogic.Station
             for (int i = 0; i < count; i++)
             {
                 var capsule = await _capsuleFactory.Create(_spawnPoints[i].position + _spawnOffset);
-                capsule.GetComponent<CapsuleController>().Init(colorPresets[i]);
-                _pool.Add(capsule);
+                capsule.Init(colorPresets[i]);
+                AddCapsule(capsule);
             }
         }
-        
     }
 }

@@ -23,7 +23,7 @@ namespace Infrastructure
 
         public void Exit()
         {
-            _capsuleFactory.CleanUp();
+         //   _capsuleFactory.CleanUp();
             _platformFactory.CleanUp();
             _stationFactory.CleanUp();
             _uiFactory.CleanUp();

@@ -34,6 +34,7 @@ namespace GameLogic
             var Selected = _platformFactory.PlatformController.GetSelectedTiles();
             CurrentStationId = _platformFactory.PlatformController.CurrentStationId;
             _platformFactory.PlatformController.SetNextPoint(_stationGenerate.GetStationById(CurrentStationId + 1));
+            //перекидывание капсул
             _stationGenerate.RemovePrevStation(CurrentStationId - 1);
             if(CurrentStationId == _stationGenerate.LastStation.StationId - _platformsBeforeGenerate)
                 _stationGenerate.GenerateStation(_stationGenerate.LastStation.StationId);

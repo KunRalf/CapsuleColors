@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using Cysharp.Threading.Tasks;
+using GameLogic.Capsule;
 using Infrastructure.Factories.Interfaces;
 using UnityEngine;
 using Zenject;
@@ -12,27 +13,29 @@ namespace Infrastructure.Factories
     {
         private const string CAPSULE_PATH = "Capsule";
         private readonly DiContainer _container;
-        private List<GameObject> _pool = new List<GameObject>();
+        private List<CapsuleController> _pool = new List<CapsuleController>();
    
         public CapsuleFactory(DiContainer container)
         {
             _container = container;
         }
+        
 
-        public async UniTask<GameObject> Create(Vector3 at)
+        public async UniTask<CapsuleController> Create(Vector3 at)
         {
             var prefab = Resources.Load<GameObject>(CAPSULE_PATH);
-            GameObject capsule = Object.Instantiate(prefab, at, Quaternion.identity);
-            _container.InjectGameObject(capsule);
+            CapsuleController capsule = Object.Instantiate(prefab, at, Quaternion.identity).GetComponent<CapsuleController>();
+            _container.InjectGameObject(capsule.gameObject);
             _pool.Add(capsule);
             return capsule;
         }
+        
         
         public void CleanUp()
         {
             foreach (var item in _pool)
             {
-                Object.Destroy(item);
+                Object.Destroy(item.gameObject);
             }
             _pool.Clear();
         }

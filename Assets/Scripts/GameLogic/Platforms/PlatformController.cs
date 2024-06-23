@@ -1,11 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using GameLogic.Capsule;
 using GameLogic.DataObjects.Objects;
 using GameLogic.Interfaces;
 using GameLogic.Station.Interfaces;
 using Infrastructure.Factories.Interfaces;
 using UnityEngine;
+using UnityEngine.UIElements;
 using Zenject;
 
 namespace GameLogic.Platforms
@@ -14,7 +16,7 @@ namespace GameLogic.Platforms
     public class PlatformController : MonoBehaviour
     {
         [SerializeField] private List<PlatformTile> _tiles;
-        
+        private List<CapsuleController> _capsulesPool = new List<CapsuleController>();
         private PlatformMover _platformMover;
         private IStation _currentStation;
         private EventsService _eventsService;
@@ -49,6 +51,17 @@ namespace GameLogic.Platforms
             {
                 _tiles[i].Init(i);
             }
+        }
+
+        public void AddCapsules(CapsuleController capsule, int tileIndex)
+        {
+            _capsulesPool.Add(capsule);
+            capsule.SetTileBindingIndex(tileIndex);
+        }
+
+        public void RemoveCapsules(CapsuleController capsule)
+        {
+            _capsulesPool.Remove(capsule); 
         }
         
         public void SetNextPoint(IStation nextTarget)
